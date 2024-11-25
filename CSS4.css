@@ -1,0 +1,173 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra de navegación fija */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-icon img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #F6C90E; /* Color amarillo */
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 10px;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  display: block;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background-color: #F6C90E;
+  color: white;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Cambia la dirección del contenido a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinear los elementos a la izquierda */
+  }
+
+  .nav-links {
+    width: 100%; /* Los enlaces ocuparán todo el ancho */
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 5px; /* Espacio más pequeño entre los enlaces */
+  }
+
+  .nav-links a {
+    font-size: 14px; /* Texto más pequeño en pantallas muy pequeñas */
+  }
+
+  .submenu {
+    position: static; /* Hace que el submenú fluya en la misma línea */
+  }
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Imágenes fuera del slider */
+.image-container img {
+  max-width: 100%; 
+  height: auto;    
+  width: 80%;     
+  display: block;  
+  margin: 0 auto;  
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Footer general */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 20px; /* Se redujo el padding */
+  font-size: 12px;    /* Tamaño de fuente reducido */
+}
+
+/* Nueva sección para los íconos de redes sociales */
+footer .social-icons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px; /* Espacio entre íconos y contenido del footer */
+}
+
+footer .social-icons-wrapper a img {
+  height: 25px; /* Tamaño ajustado de los íconos */
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons-wrapper a img:hover {
+  transform: scale(1.2); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Estilo del contenido principal del footer */
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .footer-logo img {
+  height: 40px; /* Tamaño reducido del logo */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
